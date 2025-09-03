@@ -33,7 +33,13 @@ client = TelegramClient('my_account_session', API_ID, API_HASH)
 
 async def start_telethon():
     PHONE_NUMBER = os.environ.get("+918210671539")  # or hardcode for testing
-await client.start(phone=+918210671539)
+import asyncio
+
+async def main():
+    await client.start(phone='+918210671539')  # phone should be a string
+
+# Run the async function
+asyncio.run(main())
 
 # --- HELPER FUNCTIONS ---
 
