@@ -12,10 +12,10 @@ from telethon.tl.types import PeerChannel
 
 # --- CONFIGURATION ---
 
-BOT_TOKEN = '8009074609:AAE1yEhrAf-VKSHFI6IHhjRKZhWyYp-0iKI'
+BBOT_TOKEN = '8009074609:AAE1yEhrAf-VKSHFI6IHhjRKZhWyYp-0iKI'
 API_ID = 28803298
 API_HASH = 'd8ea0f3e56c55b8ef9c0e8cb39b9c857'
-
+PHONE_NUMBER = '+918210671539'  # <-- Your mobile number here (with country code)
 ALLOWED_USER_IDS = [6065778458]  # Only your user ID is allowed
 
 DOWNLOAD_DIR = 'downloads'
@@ -40,8 +40,8 @@ async def parse_link(link: str):
     """
     Parse Telegram message link to get chat_id and message_id.
     Supports:
-    - Private groups/channels links like https://t.me/c/123456789/456
-    - Private groups/channels links with extra parts: https://t.me/c/123456789/6/456
+    - Private groups/channels links like https://t.me/c/0123456789/456
+    - Private groups/channels links with extra parts: https://t.me/c/0123456789/6/456
     - Public links like https://t.me/username/123
     """
     link = link.strip().replace("telegram.me", "t.me")  # unify domains
