@@ -32,7 +32,8 @@ logging.basicConfig(
 client = TelegramClient('my_account_session', API_ID, API_HASH)
 
 async def start_telethon():
-    await client.start()
+    PHONE_NUMBER = os.environ.get("+918210671539")  # or hardcode for testing
+await client.start(phone=PHONE_NUMBER)
 
 # --- HELPER FUNCTIONS ---
 
